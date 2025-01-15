@@ -26,12 +26,13 @@ const Header = () => {
       </Head>
     <div className="flex justify-between p-5 shadow-sm items-center">
       <div className="flex items-center gap-2">
-      <Link  href={'/'}  className="flex justify-center items-center gap-2">
-      <Image src={'/logo.png'} width={44} height={44} /> <span className="font-bold text-xl">AI Course Generator</span>
+      <Link  href={'/dashboard'}  className="flex justify-center items-center gap-2">
+      <Image src={'/logo.png'} alt="logo" width={44} height={44} /> <span className="font-bold text-xl">AI Course Generator</span>
       </Link>
       </div>
       <div className="flex justify-center items-center gap-10 cursor-pointer">
-       <Link href={"https://github.com/mrpankajpandey/ai-course-generator" }>
+      <Link href={"/dashboard"} className="text-lg text-white font-medium">Home</Link> {/* Home Button */}
+       <Link href={"#" }>
          <RxGithubLogo className="text-3xl"/>
        </Link>          
       <Link href={'/dashboard'} >

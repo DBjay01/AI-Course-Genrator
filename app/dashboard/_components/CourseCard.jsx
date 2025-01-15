@@ -24,6 +24,7 @@ const CourseCard = ({ course, refreshData, displayUser = false }) => {
       <Link href={"/course/" + course?.courseId}>
         <Image
           src={course?.courseBanner}
+          alt="courseBanner"
           width={300}
           height={200}
           className="w-full h-[200px] rounded-md object-cover"
@@ -60,11 +61,11 @@ const CourseCard = ({ course, refreshData, displayUser = false }) => {
 
         <p className="text-sm text-gray-400 my-1">{course?.category}</p>
         <div className="flex items-center justify-between">
-          <h2 className="flex gap-2 items-center p-1 bg-purple-50 text-primary text-sm rounded-sm">
+          <h2 className="flex gap-2 items-center p-1 bg-gray-900 text-primary text-sm rounded-sm">
             <HiOutlineBookOpen /> {course?.courseOutput?.course?.noOfChapters}
             -Chapters
           </h2>
-          <h2 className="text-sm bg-purple-50 text-primary p-1 rounded-sm ">
+          <h2 className="text-sm bg-gray-900 text-primary p-1 rounded-sm ">
             {course?.level}
           </h2>
         </div>
@@ -72,6 +73,7 @@ const CourseCard = ({ course, refreshData, displayUser = false }) => {
           <div className="flex items-center gap-2 mt-2">
             <Image
               src={course?.userProfileImage}
+              alt="user-img"
               width={30}
               height={30}
               className="rounded-full"

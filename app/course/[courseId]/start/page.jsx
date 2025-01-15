@@ -7,6 +7,7 @@ import ChapterListCard from "./_components/ChapterListCard";
 import ChapterContent from "./_components/ChapterContent";
 
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
+import Header from "@/app/_components/Header";
 
 const CourseStart = ({ params }) => {
   const [course, setCourse] = useState([]);
@@ -49,6 +50,7 @@ const CourseStart = ({ params }) => {
   };
   return (
     <div>
+      <Header></Header>
        {/* Toggle button for sidebar on mobile */}
        <div className="md:hidden p-4">
         <button
@@ -59,7 +61,7 @@ const CourseStart = ({ params }) => {
         </button>
       </div>
       {/* chapters list sidebar */}
-      <div className={`fixed md:w-64 w-64 h-screen bg-white border-r shadow-sm z-20 transform transition-transform md:translate-x-0 ${
+      <div className={`fixed md:w-64 w-64 h-screen bg-black border-r shadow-sm z-20 transform transition-transform md:translate-x-0 ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:block`}>
         <h2 className="font-medium text-lg bg-primary p-3 text-white">

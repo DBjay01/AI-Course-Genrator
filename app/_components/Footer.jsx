@@ -12,11 +12,11 @@ const Footer = () => {
       name:'About Us',
       path:'/about'
     },
-    {id:1,
+    {id:2,
       name:'Contact Us',
       path:'/contact'
     },
-    {id:1,
+    {id:3,
       name:'Terms & Conditions',
       path:'/terms'
     },

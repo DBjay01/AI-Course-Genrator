@@ -24,6 +24,7 @@ const Card = ({ course, refreshData, }) => {
       <Link href={"/course/" + course?.courseId}>
         <Image
           src={course?.courseBanner}
+          alt="Coures-Banner"
           width={300}
           height={200}
           className="w-full h-[200px] rounded-md object-cover"
@@ -70,6 +71,7 @@ const Card = ({ course, refreshData, }) => {
               src={course?.userProfileImage}
               width={30}
               height={30}
+              alt="Profile-img"
               className="rounded-full"
             />
             <h2>{course?.userName}</h2>

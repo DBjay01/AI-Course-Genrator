@@ -3,7 +3,7 @@ import { HiOutlineClock } from 'react-icons/hi2'
 
 const ChapterListCard = ({chapter,index}) => {
   return (
-    <div className='grid grid-cols-5 p-2 items-center border-b'>
+    <div className='grid grid-cols-5 bg-gray-900 p-2 items-center border-b'>
          <div>
             <h2 className= 'w-8 h-8 flex items-center justify-center p-2 bg-primary text-white rounded-full'>{index+1}</h2>
          </div>

@@ -6,7 +6,7 @@ import { Progress } from "@/components/ui/progress";
 import { HiOutlineHome } from "react-icons/hi";
 import { CiPower } from "react-icons/ci";
 import { HiOutlineShieldCheck } from "react-icons/hi";
-import { HiOutlineSquare3Stack3D } from "react-icons/hi2";
+import { HiBackward, HiOutlineSquare3Stack3D } from "react-icons/hi2";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import { UserCourseListContext } from "@/app/_context/UserCourseListContext";
@@ -66,6 +66,12 @@ const Sidebar = () => {
       path: "/dashboard/logout",
       isLogout: true,
     },
+    // {
+    //   id: 5,
+    //   name: "Back",
+    //   icon: <HiBackward />,
+    //   path: "http://localhost:3001/dashboard",
+    // },
   ];
 
 
@@ -83,8 +89,11 @@ const Sidebar = () => {
   // Determine if redirect to upgrade is needed
   const needsUpgrade = !isAdmin && courseCount >= maxCourses;
   return (
-    <div className="fixed h-full md:w-64 p-4 shadow-md">
-      <Image src={"/logo.png"} width={44} height={44} />
+    <div className="fixed h-full md:w-64 p-4 shadow-lg">
+      <div className="flex items-center justify-center gap-4">
+        <Image src={"/logo.png"} alt="logo" width={44} height={44} />
+        <h2 className="text-2xl">Vivid Fusion</h2>
+      </div> 
       <hr className="my-3" />
       <ul>
         {menu.map((item) => (
@@ -121,13 +130,11 @@ const Sidebar = () => {
           ) : (
             <Progress value={(courseCount / maxCourses) * 100} />
           )}
-          {isAdmin
-            ? `Courses Created: ${courseCount}`
-            : `${courseCount} out of ${maxCourses} courses created`}
+
         </h2>
         {!isAdmin && needsUpgrade && (
-          <h2 className="text-xs text-gray-500">
-            Upgrade your plan to unlimted course generate
+          <h2 className="text-md text-gray-500">
+            - By Vivid Fusion
           </h2>
         )}
       </div>
