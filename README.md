@@ -4,6 +4,7 @@
 - An AI-powered platform for creating and managing online courses. Built using **Next.js** and integrated with **Clerk** for authentication, **Gemini API** for AI-generated content, and **Firebase** for file storage, this platform allows users to create, track, and manage their courses, while administrators can oversee user and course management.
 
 ---
+Project Link - https://ai-course-genrator-git-main-kedars-projects-9a6fd8d5.vercel.app/
 
 ## Features ✨
 
